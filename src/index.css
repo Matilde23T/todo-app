@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+
+
+.bg-navbar {
+    background: #4776E6; /* fallback */
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
+}
+
+.bg-home{
+    background-color: #fff9fa;
+}

@@ -28,7 +28,7 @@ class ApiService {
     return data;
   }
 
-  // 🔑 AUTH
+ 
   login(username, password) {
     return this.request("/login", {
       method: "POST",
@@ -40,7 +40,7 @@ class ApiService {
     return this.request("/login/me");
   }
 
-  // ✅ TODOS
+  
   fetchTodos() {
     return this.request("/todos");
   }

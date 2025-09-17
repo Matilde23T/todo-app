@@ -1,12 +1,33 @@
-# React + Vite
+# Todo App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Presentation 
 
-Currently, two official plugins are available:
+Todo App is a full-stack application developed with Node.js and React.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The backend is a demo built with Node.js:
+Data is managed in memory, without the use of a database.
+Credentials are predefined for demonstration purposes.
 
-## Expanding the ESLint configuration
+The main goal is to demonstrate the integration between the frontend and backend, simulating typical operations of a full-stack application.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Main features:
+
+- Login with demo credentials.
+- Create new todos.
+- Categorize todos to improve organization and the user experience.
+
+This project is intended as a practical exercise to test state management, HTTP requests, and communication between the frontend and backend in a real-world context.
+
+## External libraries
+
+- Lucide react (icons)
+- Lottie files (gif icon)
+
+## Hosting and deployment
+
+- Render (backend)
+- Netlify (frontend)
+
+## Contact
+
+For any questions or advice you can write to this email: [matilde.webdev@gmail.com](matilde.webdev@gmail.com)

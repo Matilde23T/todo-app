@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useAuth } from "../Context/AuthContex"
 import { useNavigate, Navigate } from "react-router-dom";
-
+import { EyeOff } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 
 
@@ -14,6 +15,7 @@ export default function Login(){
  const [loading, setLoading] = useState(false);
  const [error, setError] = useState('');
  const {login, isAuthenticated} = useAuth();
+ const [ visible, setVisible] = useState(false);
  const navigate = useNavigate();
 
  if(isAuthenticated){
@@ -79,18 +81,31 @@ export default function Login(){
         </div>
 
         <div className="mb-4">
-          <label className="font-semibold text-white md:text-lg">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            value={credentials.password}
-            onChange={handleChange}
-            placeholder="inserisci password"
-            className="w-full px-2 py-2 my-2 rounded-xl border border-white/30 text-black focus:border-white/30 focus:outline-none "
-          />
-        </div>
+  <label className="font-semibold text-white md:text-lg" htmlFor="password">
+    Password:
+  </label>
+
+  <div className="flex items-center">
+    <input
+      type={visible ? "text" : "password"}
+      id="password"
+      name="password"
+      required
+      value={credentials.password}
+      onChange={handleChange}
+      placeholder="inserisci password"
+      className="flex-1 px-2 py-2 rounded-xl border border-white/30 text-black focus:border-white/50 focus:outline-none"
+    />
+
+    <button
+      type="button"
+      onClick={() => setVisible(!visible)}
+      className="w-10 h-10 ml-2 flex items-center justify-center rounded-xl border border-white/30 text-white hover:bg-white/10 transition"
+    >
+      {visible ? <Eye/> : <EyeOff />}
+    </button>
+  </div>
+</div>
 
         <div className="text-center mt-5">
           <button
